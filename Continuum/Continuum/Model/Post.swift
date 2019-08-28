@@ -45,3 +45,31 @@ class Comment {
     }
 }
 
+extension Comment: SearchableRecord {
+    func matches(searchTerm: String) -> Bool {
+        let textLowercased = text.lowercased()
+        let searchTermLowercased = searchTerm.lowercased()
+        return textLowercased.contains(searchTermLowercased)
+    }
+}
+
+extension Post: SearchableRecord {
+    func matches(searchTerm: String) -> Bool {
+        
+        var commentResult: Bool = false
+        let searchTermLowercased = searchTerm.lowercased()
+        
+        for word in comments {
+            let wordLowercased = word.text.lowercased()
+            commentResult = wordLowercased.contains(searchTermLowercased)
+        }
+        let captionLowercased = caption.lowercased()
+        let captionResult = captionLowercased.contains(searchTermLowercased)
+        
+        if commentResult == true || captionResult == true {
+            return true
+        } else {
+            return false
+        }
+    }
+}
