@@ -12,6 +12,13 @@
 		A5301B352315BC88000D287D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5301B342315BC88000D287D /* Assets.xcassets */; };
 		A5301B382315BC88000D287D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5301B362315BC88000D287D /* LaunchScreen.storyboard */; };
 		A5301B422315BCA9000D287D /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5301B412315BCA9000D287D /* CloudKit.framework */; };
+		A5301B482315BF88000D287D /* PostListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5301B472315BF88000D287D /* PostListTableViewController.swift */; };
+		A5301B4A2315BFE9000D287D /* PostDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5301B492315BFE9000D287D /* PostDetailTableViewController.swift */; };
+		A5301B4C2315C03D000D287D /* AddPostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5301B4B2315C03D000D287D /* AddPostTableViewController.swift */; };
+		A5301B4E2315C073000D287D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5301B4D2315C073000D287D /* Post.swift */; };
+		A5301B502315C4F5000D287D /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5301B4F2315C4F5000D287D /* PostController.swift */; };
+		A5301B532315CA07000D287D /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5301B522315CA07000D287D /* PostTableViewCell.swift */; };
+		A5301B562315ED68000D287D /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5301B552315ED68000D287D /* DateHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +30,13 @@
 		A5301B392315BC88000D287D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5301B3F2315BCA7000D287D /* Continuum.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Continuum.entitlements; sourceTree = "<group>"; };
 		A5301B412315BCA9000D287D /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		A5301B472315BF88000D287D /* PostListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListTableViewController.swift; sourceTree = "<group>"; };
+		A5301B492315BFE9000D287D /* PostDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailTableViewController.swift; sourceTree = "<group>"; };
+		A5301B4B2315C03D000D287D /* AddPostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostTableViewController.swift; sourceTree = "<group>"; };
+		A5301B4D2315C073000D287D /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		A5301B4F2315C4F5000D287D /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
+		A5301B522315CA07000D287D /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		A5301B552315ED68000D287D /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +71,8 @@
 		A5301B2C2315BC88000D287D /* Continuum */ = {
 			isa = PBXGroup;
 			children = (
+				A5301B542315ECBD000D287D /* Helpers */,
+				A5301B512315C9DE000D287D /* Views */,
 				A5301B462315BCEA000D287D /* View Controller */,
 				A5301B452315BCE3000D287D /* Model Controller */,
 				A5301B442315BCDD000D287D /* Model */,
@@ -89,6 +105,7 @@
 		A5301B442315BCDD000D287D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A5301B4D2315C073000D287D /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -96,6 +113,7 @@
 		A5301B452315BCE3000D287D /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A5301B4F2315C4F5000D287D /* PostController.swift */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -103,8 +121,27 @@
 		A5301B462315BCEA000D287D /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A5301B472315BF88000D287D /* PostListTableViewController.swift */,
+				A5301B492315BFE9000D287D /* PostDetailTableViewController.swift */,
+				A5301B4B2315C03D000D287D /* AddPostTableViewController.swift */,
 			);
 			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		A5301B512315C9DE000D287D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A5301B522315CA07000D287D /* PostTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A5301B542315ECBD000D287D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A5301B552315ED68000D287D /* DateHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,7 +223,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5301B532315CA07000D287D /* PostTableViewCell.swift in Sources */,
+				A5301B562315ED68000D287D /* DateHelper.swift in Sources */,
 				A5301B2E2315BC88000D287D /* AppDelegate.swift in Sources */,
+				A5301B482315BF88000D287D /* PostListTableViewController.swift in Sources */,
+				A5301B4C2315C03D000D287D /* AddPostTableViewController.swift in Sources */,
+				A5301B4A2315BFE9000D287D /* PostDetailTableViewController.swift in Sources */,
+				A5301B4E2315C073000D287D /* Post.swift in Sources */,
+				A5301B502315C4F5000D287D /* PostController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
