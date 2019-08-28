@@ -25,9 +25,8 @@ class PostDetailTableViewController: UITableViewController {
     }
     
     @IBAction func commentButtonTapped(_ sender: Any) {
-        let alertController = UIAlertController.init(title: "Leave a comment", message: nil, preferredStyle: .alert)
+        let alertController = UIAlertController.init(title: "Leave a comment", message: "tell 'em how you really feel", preferredStyle: .alert)
         alertController.addTextField { (textfield) in
-            textfield.placeholder = "tell 'em how you really feel"
         }
         
         let addCommentAction = UIAlertAction(title: "Add", style: .default) { (_) in

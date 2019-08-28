@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddPostTableViewController: UITableViewController, UIImagePickerControllerDelegate {
+class AddPostTableViewController: UITableViewController {
     @IBOutlet weak var selectImageButton: UIButton!
     @IBOutlet weak var captionTextField: UITextField!
     @IBOutlet weak var selectImageView: UIImageView!
@@ -26,6 +26,7 @@ class AddPostTableViewController: UITableViewController, UIImagePickerController
     @IBAction func selectImageButtonTapped(_ sender: Any) {
         let alertController = UIAlertController(title: "Choose a photo", message: nil, preferredStyle: .actionSheet)
         let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
 
         
         let camera = UIAlertAction(title: "Camera", style: .default) { (_) in
@@ -36,12 +37,14 @@ class AddPostTableViewController: UITableViewController, UIImagePickerController
             imagePicker.sourceType = .photoLibrary
             self.present(imagePicker, animated: true)
         }
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (_) in
+            self.dismiss(animated: true)
+        }
         
         alertController.addAction(camera)
         alertController.addAction(photoLibrary)
+        alertController.addAction(cancel)
         self.present(alertController, animated: true)
-        
-        selectImageButton.setTitle("", for: .normal)
     }
     
     @IBAction func addPostButtonTapped(_ sender: Any) {
@@ -57,4 +60,13 @@ class AddPostTableViewController: UITableViewController, UIImagePickerController
     }
 }
 
+extension AddPostTableViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let chosenImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
+        selectImageView.image = chosenImage
+        selectImageButton.setTitle("", for: .normal)
+        dismiss(animated: true)
+    }
+}
 
