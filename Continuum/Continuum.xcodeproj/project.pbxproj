@@ -20,6 +20,7 @@
 		A5301B532315CA07000D287D /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5301B522315CA07000D287D /* PostTableViewCell.swift */; };
 		A5301B562315ED68000D287D /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5301B552315ED68000D287D /* DateHelper.swift */; };
 		A5EA929B2316F7A800957066 /* SearchableRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EA929A2316F7A800957066 /* SearchableRecord.swift */; };
+		A5EA929D23173D0200957066 /* PhotoSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EA929C23173D0200957066 /* PhotoSelectorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		A5301B522315CA07000D287D /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		A5301B552315ED68000D287D /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		A5EA929A2316F7A800957066 /* SearchableRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableRecord.swift; sourceTree = "<group>"; };
+		A5EA929C23173D0200957066 /* PhotoSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSelectorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				A5301B472315BF88000D287D /* PostListTableViewController.swift */,
 				A5301B492315BFE9000D287D /* PostDetailTableViewController.swift */,
 				A5301B4B2315C03D000D287D /* AddPostTableViewController.swift */,
+				A5EA929C23173D0200957066 /* PhotoSelectorViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				A5301B2E2315BC88000D287D /* AppDelegate.swift in Sources */,
 				A5301B482315BF88000D287D /* PostListTableViewController.swift in Sources */,
 				A5301B4C2315C03D000D287D /* AddPostTableViewController.swift in Sources */,
+				A5EA929D23173D0200957066 /* PhotoSelectorViewController.swift in Sources */,
 				A5301B4A2315BFE9000D287D /* PostDetailTableViewController.swift in Sources */,
 				A5301B4E2315C073000D287D /* Post.swift in Sources */,
 				A5301B502315C4F5000D287D /* PostController.swift in Sources */,
